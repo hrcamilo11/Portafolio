@@ -15,23 +15,23 @@ export const getResumeData = (locale: string) => {
     location: "Medellín, Colombia",
     locationLink: "https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia",
     description: isEn 
-      ? "Systems Engineer focused on backend, cloud (AWS), and offensive cybersecurity."
-      : "Ingeniero de Sistemas enfocado en backend, cloud (AWS) y ciberseguridad ofensiva.",
+      ? "Systems Engineering and Data Science student. Focused on backend, cloud (AWS), and offensive cybersecurity."
+      : "Estudiante de Ingeniería de Sistemas e Informática e Ingeniería en Ciencias de Datos. Enfocado en backend, cloud (AWS) y ciberseguridad ofensiva.",
     summary: isEn
-      ? "Systems Engineer with experience in backend development and serverless architectures on AWS, working with services such as Lambda, DynamoDB, S3, and Cognito. I have implemented scalable solutions, CI/CD pipelines, and monitoring of containerized services in Docker. I am interested in the intersection between cloud, DevOps, and security, actively participating in CTFs with a focus on binary exploitation and web vulnerabilities."
-      : "Ingeniero de Sistemas con experiencia en desarrollo backend y arquitecturas serverless en AWS, trabajando con servicios como Lambda, DynamoDB, S3 y Cognito. He implementado soluciones escalables, pipelines CI/CD y monitoreo de servicios en contenedores Docker. Me interesa la intersección entre cloud, DevOps y seguridad, participando activamente en CTFs con enfoque en explotación binaria y vulnerabilidades web.",
+      ? "Systems Engineering and Data Science student at UPB. Specialized in backend development, serverless architectures on AWS (Lambda, DynamoDB, S3, Cognito), and CI/CD pipelines. Active cybersecurity researcher and CTF player with a focus on binary exploitation and web vulnerabilities."
+      : "Estudiante de Ingeniería de Sistemas y Ciencia de Datos en la UPB. Especializado en desarrollo backend, arquitecturas serverless en AWS (Lambda, DynamoDB, S3, Cognito) y pipelines CI/CD. Investigador activo en ciberseguridad y jugador de CTF con enfoque en explotación binaria y vulnerabilidades web.",
     avatarUrl: "/profile1.png",
     skills: [
+      { name: "React", icon: Icons.react },
+      { name: "Node.js", icon: Nodejs },
       { name: "Python", icon: Python },
       { name: "Go", icon: Golang },
-      { name: "Node.js", icon: Nodejs },
+      { name: "TypeScript", icon: Icons.typescript },
+      { name: "PostgreSQL", icon: Icons.postgresql },
       { name: "Docker", icon: Docker },
-      { name: "AWS (Lambda, S3, DynamoDB, Cognito)", icon: Icons.globe },
-      { name: isEn ? "Serverless Architecture" : "Arquitecturas Serverless", icon: Icons.globe },
-      { name: "CI/CD Pipelines", icon: Icons.globe },
-      { name: isEn ? "Offensive Cybersecurity" : "Ciberseguridad Ofensiva", icon: Icons.globe },
-      { name: isEn ? "Binary Exploitation" : "Explotación Binaria", icon: Icons.globe },
-      { name: isEn ? "Web Vulnerabilities" : "Vulnerabilidades Web", icon: Icons.globe },
+      { name: "AWS", icon: Icons.aws },
+      { name: isEn ? "Data Science" : "Ciencia de Datos", icon: Icons.globe },
+      { name: isEn ? "Cybersecurity (CTF)" : "Ciberseguridad (CTF)", icon: Icons.globe },
     ],
     navbar: [
       { href: "/", icon: HomeIcon, label: isEn ? "Home" : "Inicio" },
@@ -64,62 +64,58 @@ export const getResumeData = (locale: string) => {
 
     work: [
       {
-        company: "Laboratorio Nacional LNCE",
-        href: "#",
+        company: "Laboratorio Nacional de Calidad de la Energía (LNCE)",
+        href: "https://www.upb.edu.co",
         badges: [],
         location: "Medellín, Colombia",
-        title: isEn ? "Systems and Informatics Engineer" : "Ingeniero de Sistemas e Informático",
-        logoUrl: "/Logo - Laboratorio Color.png",
-        start: isEn ? "February 2026" : "Febrero 2026",
+        title: isEn ? "Research Intern" : "Pasante Investigativo",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        start: isEn ? "February 2024" : "Febrero 2024",
         end: isEn ? "Present" : "Presente",
         description: isEn
-          ? "Development and implementation of a full-stack web platform with serverless architecture on AWS (Lambda, DynamoDB, S3, Cognito). Implementation of CI/CD pipelines, DevOps best practices, and process automation in cloud environments."
-          : "Desarrollo e implementación de plataforma web full-stack con arquitectura serverless en AWS (Lambda, DynamoDB, S3, Cognito). Implementación de pipelines CI/CD, buenas prácticas DevOps y automatización de procesos en entornos cloud.",
+          ? "Development and implementation of a full-stack web platform with serverless architecture on AWS (Lambda, DynamoDB, S3, Cognito). Implementation of CI/CD pipelines and process automation."
+          : "Desarrollo e implementación de plataforma web full-stack con arquitectura serverless en AWS (Lambda, DynamoDB, S3, Cognito). Implementación de pipelines CI/CD y automatización de procesos.",
       },
       {
         company: "Universidad Pontificia Bolivariana",
         href: "https://www.upb.edu.co",
         badges: [],
         location: "Medellín, Colombia",
-        title: isEn ? "Research Intern – Systems Engineering" : "Pasante Investigativo – Ingeniería de Sistemas",
-        logoUrl: "/Logo UPB Color.png",
-        start: isEn ? "June 2025" : "Junio 2025",
-        end: isEn ? "February 2026" : "Febrero 2026",
+        title: isEn ? "Student Assistant" : "Auxiliar de Laboratorio",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        start: "2022",
+        end: "2023",
         description: isEn
-          ? "Development of a monitoring system for containerized services in Docker, improving observability and fault detection. Supervision and maintenance of services on private servers, ensuring availability and operational continuity."
-          : "Desarrollo de sistema de monitoreo para servicios contenerizados en Docker, mejorando la observabilidad y detección de fallos. Supervisión y mantenimiento de servicios en servidores privados, asegurando disponibilidad y continuidad operativa.",
+          ? "Monitoring of containerized services in Docker, improving observability and fault detection. Support in programming labs."
+          : "Monitoreo de servicios contenerizados en Docker, mejorando la observabilidad y detección de fallos. Apoyo en laboratorios de programación.",
       },
     ],
     education: [
       {
         school: "Universidad Pontificia Bolivariana",
         href: "https://www.upb.edu.co",
-        degree: isEn ? "Systems and Informatics Engineering" : "Ingeniería de Sistemas e Informática",
-        logoUrl: "/Logo UPB Color.png",
-        start: "",
+        degree: isEn 
+          ? "Systems Engineering & Data Science Engineering" 
+          : "Ingeniería de Sistemas e Informática e Ingeniería en Ciencia de Datos",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        start: "2020",
         end: "2025",
       },
     ],
     projects: [
       {
-        title: isEn ? "Ch0wn3rs (CTF Team)" : "Ch0wn3rs (Equipo CTF)",
-        href: "https://github.com/hrcamilo11",
-        dates: isEn ? "Present" : "Presente",
+        title: "Tracktext",
+        href: "https://github.com/hrcamilo11/Tracktext",
+        dates: "2024",
         active: true,
         description: isEn
-          ? "Co-founder and active member of a team focused on Capture The Flag (CTF) competitions, specializing in binary exploitation (Pwn) and web vulnerabilities. Development of exploits, low-level analysis, and resolution of cybersecurity challenges under pressure."
-          : "Cofundador y miembro activo de equipo enfocado en competencias Capture The Flag (CTF), especializado en explotación binaria (Pwn) y vulnerabilidades web. Desarrollo de exploits, análisis de bajo nivel y resolución de retos de ciberseguridad bajo presión.",
-        technologies: [
-          "Cybersecurity",
-          "Binary Exploitation",
-          "Pwn",
-          "Web Vulnerabilities",
-          "CTF",
-        ],
+          ? "A TypeScript-based tool designed for tracking and processing text data with high precision."
+          : "Herramienta basada en TypeScript diseñada para el seguimiento y procesamiento de datos de texto con alta precisión.",
+        technologies: ["TypeScript", "Node.js"],
         links: [
           {
             type: "GitHub",
-            href: "https://github.com/hrcamilo11",
+            href: "https://github.com/hrcamilo11/Tracktext",
             icon: <Icons.github className="size-3" />,
           },
         ],
@@ -127,26 +123,56 @@ export const getResumeData = (locale: string) => {
         video: "",
       },
       {
-        title: isEn ? "Professional Profile / Backend & Cloud" : "Perfil Profesional / Backend & Cloud",
-        href: "https://github.com/hrcamilo11",
-        dates: "2024 - Presente",
+        title: "TuSolucion - Plataforma",
+        href: "https://github.com/hrcamilo11/TuSolucion---Plataforma",
+        dates: "2023",
         active: true,
         description: isEn
-          ? "Repositories focused on backend development, cloud, and cybersecurity (CTF, binary and web exploitation)."
-          : "Repositorios enfocados en desarrollo backend, cloud y ciberseguridad (CTF, explotación binaria y web).",
-        technologies: [
-          "AWS",
-          "Lambda",
-          "DynamoDB",
-          "Docker",
-          "Python",
-          "Go",
-          "CI/CD",
-        ],
+          ? "Full-stack service platform connecting providers with clients through efficient resource management."
+          : "Plataforma de servicios full-stack que conecta proveedores con clientes mediante una gestión eficiente de recursos.",
+        technologies: ["TypeScript", "React", "Node.js", "PostgreSQL"],
         links: [
           {
             type: "Source",
-            href: "https://github.com/hrcamilo11",
+            href: "https://github.com/hrcamilo11/TuSolucion---Plataforma",
+            icon: <Icons.github className="size-3" />,
+          },
+        ],
+        image: "",
+        video: "",
+      },
+      {
+        title: "TravelTales",
+        href: "https://github.com/hrcamilo11/TravelTales",
+        dates: "2023",
+        active: true,
+        description: isEn
+          ? "Modern web application for travelers to document and share globetrotting experiences."
+          : "Aplicación web moderna para viajeros diseñada para documentar y compartir experiencias de viaje por el mundo.",
+        technologies: ["JavaScript", "HTML", "CSS"],
+        links: [
+          {
+            type: "Source",
+            href: "https://github.com/hrcamilo11/TravelTales",
+            icon: <Icons.github className="size-3" />,
+          },
+        ],
+        image: "",
+        video: "",
+      },
+      {
+        title: "SIGAA Clone",
+        href: "https://github.com/hrcamilo11/SIGAA",
+        dates: "2022",
+        active: true,
+        description: isEn
+          ? "Academic management system clone focused on UI/UX improvements and responsive design."
+          : "Clon de sistema de gestión académica enfocado en mejoras de UI/UX y diseño responsivo.",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        links: [
+          {
+            type: "GitHub",
+            href: "https://github.com/hrcamilo11/SIGAA",
             icon: <Icons.github className="size-3" />,
           },
         ],
