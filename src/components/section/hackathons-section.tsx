@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { DATA } from "@/data/resume";
+import { Link } from "@/i18n/routing";
+import { getResumeData } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
+import { useLocale } from "next-intl";
 
 export default function HackathonsSection() {
+  const locale = useLocale();
+  const DATA = getResumeData(locale);
   if (DATA.hackathons.length === 0) return null;
 
   return (
@@ -19,11 +22,14 @@ export default function HackathonsSection() {
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">I like building things</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+              {locale === "es" ? "Me gusta construir cosas" : "I like building things"}
+            </h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              During my time in university, I attended {DATA.hackathons.length}+
-              hackathons. People from around the country would come together and
-              build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.
+              {locale === "es" 
+                ? `Durante mi tiempo en la universidad, asistí a más de ${DATA.hackathons.length} hackathons. Personas de todo el país se reunían y construían cosas increíbles en 2-3 días. Fue revelador ver las infinitas posibilidades que cobraban vida gracias a un grupo de personas motivadas y apasionadas.`
+                : `During my time in university, I attended ${DATA.hackathons.length}+ hackathons. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.`
+              }
             </p>
           </div>
         </div>
@@ -60,7 +66,7 @@ export default function HackathonsSection() {
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
                     {hackathon.links.map((link, idx) => (
                       <Link
-                        href={link.href}
+                        href={link.href as any}
                         key={idx}
                         target="_blank"
                         rel="noopener noreferrer"

@@ -1,12 +1,13 @@
 import { allPosts } from "content-collections";
 import { formatDate } from "@/lib/utils";
-import { DATA } from "@/data/resume";
+import { getResumeData } from "@/data/resume";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { setRequestLocale } from "next-intl/server";
 
 function getSortedPosts() {
   return [...allPosts].sort((a, b) => {
@@ -16,6 +17,8 @@ function getSortedPosts() {
     return 1;
   });
 }
+
+import { useTranslations } from "next-intl";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -28,9 +31,11 @@ export async function generateMetadata({
 }: {
   params: Promise<{
     slug: string;
+    locale: string;
   }>;
 }): Promise<Metadata | undefined> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  const DATA = getResumeData(locale);
   const post = allPosts.find((p) => p._meta.path.replace(/\.mdx$/, "") === slug);
 
   if (!post) {
@@ -77,9 +82,14 @@ export default async function Blog({
 }: {
   params: Promise<{
     slug: string;
+    locale: string;
   }>;
 }) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const DATA = getResumeData(locale);
+  const t = useTranslations("Post");
+
   const sortedPosts = getSortedPosts();
   const currentIndex = sortedPosts.findIndex(
     (p) => p._meta.path.replace(/\.mdx$/, "") === slug
@@ -101,7 +111,7 @@ export default async function Blog({
     "@type": "BlogPosting",
     headline: post.title,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
+    datePublishedModified: post.publishedAt,
     description: post.summary,
     image: post.image
       ? `${DATA.url}${post.image}`
@@ -123,9 +133,9 @@ export default async function Blog({
         }}
       />
       <div className="flex justify-start gap-4 items-center">
-        <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to Blog">
+        <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label={t("back")}>
           <ChevronLeft className="size-3 group-hover:-translate-x-px transition-transform" />
-          Back to Blog
+          {t("back")}
         </Link>
       </div>
       <div className="flex flex-col gap-4">
@@ -160,7 +170,7 @@ export default async function Blog({
             >
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
                 <ChevronLeft className="size-3" />
-                Previous
+                {t("previous")}
               </span>
               <span className="text-sm font-medium group-hover:text-foreground transition-colors whitespace-normal wrap-break-word">
                 {previousPost.title}
@@ -176,7 +186,7 @@ export default async function Blog({
               className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors text-right"
             >
               <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
-                Next
+                {t("next")}
                 <ChevronRight className="size-3" />
               </span>
               <span className="text-sm font-medium group-hover:text-foreground transition-colors whitespace-normal wrap-break-word">

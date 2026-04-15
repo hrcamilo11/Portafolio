@@ -1,0 +1,38 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "theme": "Theme",
+    "language": "Language"
+  },
+  "Hero": {
+    "hi": "Hi, I'm {name}"
+  },
+  "Sections": {
+    "about": "About",
+    "work": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Want to chat? Just shoot me a dm",
+    "linkText": "on LinkedIn",
+    "suffix": "and I'll respond as soon as I can. I will ignore any spam requests."
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Thoughts on software development, life, and more.",
+    "pagination": "Page {page} of {total}",
+    "previous": "Previous",
+    "next": "Next",
+    "empty": "No items found yet. Check back later!"
+  },
+  "Post": {
+    "back": "Back to Blog",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

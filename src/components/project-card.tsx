@@ -4,7 +4,7 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useState } from "react";
 import Markdown from "react-markdown";
 

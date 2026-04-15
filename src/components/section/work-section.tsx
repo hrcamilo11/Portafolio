@@ -7,9 +7,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { DATA } from "@/data/resume";
+import { getResumeData } from "@/data/resume";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLocale } from "next-intl";
 
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
@@ -31,6 +32,9 @@ function LogoImage({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function WorkSection() {
+  const locale = useLocale();
+  const DATA = getResumeData(locale);
+
   return (
     <Accordion type="single" collapsible className="w-full grid gap-6">
       {DATA.work.map((work) => (
@@ -71,7 +75,7 @@ export default function WorkSection() {
               </div>
               <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
                 <span>
-                  {work.start} - {work.end ?? "Present"}
+                  {work.start} - {work.end}
                 </span>
               </div>
             </div>

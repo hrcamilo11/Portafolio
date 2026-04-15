@@ -1,0 +1,38 @@
+{
+  "Navbar": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "theme": "Tema",
+    "language": "Idioma"
+  },
+  "Hero": {
+    "hi": "Hola, soy {name}"
+  },
+  "Sections": {
+    "about": "Sobre mí",
+    "work": "Experiencia Laboral",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Mis Proyectos",
+    "contact": "Contacto"
+  },
+  "Contact": {
+    "title": "¿Quieres hablar?",
+    "description": "Solo envíame un mensaje directo",
+    "linkText": "en LinkedIn",
+    "suffix": "y te responderé lo antes posible. Ignoraré cualquier solicitud de spam."
+  },
+  "Blog": {
+    "title": "Blog",
+    "description": "Reflexiones sobre el desarrollo de software, la vida y mucho más.",
+    "pagination": "Página {page} de {total}",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "empty": "No hay artículos publicados aún. ¡Vuelve pronto!"
+  },
+  "Post": {
+    "back": "Volver al Blog",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  }
+}

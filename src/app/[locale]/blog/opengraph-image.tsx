@@ -1,6 +1,5 @@
- 
 import { ImageResponse } from "next/og";
-import { DATA } from "@/data/resume";
+import { getResumeData } from "@/data/resume";
 
 export const runtime = "edge";
 
@@ -105,11 +104,17 @@ const styles = {
     },
 } as const;
 
-export default async function Image() {
+export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const DATA = getResumeData(locale);
+    const isEn = locale === "en";
+
     try {
         const fontData = await getFontData();
         const title = "Blog";
-        const description = "Thoughts on software development, life, and more.";
+        const description = isEn 
+            ? "Thoughts on software development, life, and more."
+            : "Reflexiones sobre el desarrollo de software, la vida y mucho más.";
         const imageUrl = DATA.avatarUrl
             ? new URL(DATA.avatarUrl, DATA.url).toString()
             : undefined;
