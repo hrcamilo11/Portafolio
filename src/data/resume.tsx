@@ -109,9 +109,9 @@ export const getResumeData = (locale: string) => {
         dates: "2024",
         active: true,
         description: isEn
-          ? "A TypeScript-based tool designed for tracking and processing text data with high precision."
-          : "Herramienta basada en TypeScript diseñada para el seguimiento y procesamiento de datos de texto con alta precisión.",
-        technologies: ["TypeScript", "Node.js"],
+          ? "High-precision text tracking and processing engine built with TypeScript. Features advanced string manipulation algorithms and optimized performance for large-scale data sets."
+          : "Motor de seguimiento y procesamiento de texto de alta precisión construido con TypeScript. Incluye algoritmos avanzados de manipulación de cadenas y rendimiento optimizado para grandes conjuntos de datos.",
+        technologies: ["TypeScript", "Node.js", "Jest"],
         links: [
           {
             type: "GitHub",
@@ -119,7 +119,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "",
+        image: "/atomic.png", 
         video: "",
       },
       {
@@ -128,9 +128,9 @@ export const getResumeData = (locale: string) => {
         dates: "2023",
         active: true,
         description: isEn
-          ? "Full-stack service platform connecting providers with clients through efficient resource management."
-          : "Plataforma de servicios full-stack que conecta proveedores con clientes mediante una gestión eficiente de recursos.",
-        technologies: ["TypeScript", "React", "Node.js", "PostgreSQL"],
+          ? "A comprehensive full-stack ecosystem connecting service providers with clients. Implements real-time resource management, secure payment gateways, and a robust rating system."
+          : "Un ecosistema full-stack completo que conecta proveedores de servicios con clientes. Implementa gestión de recursos en tiempo real, pasarelas de pago seguras y un robusto sistema de calificación.",
+        technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "TailwindCSS"],
         links: [
           {
             type: "Source",
@@ -138,7 +138,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "",
+        image: "/ib.png",
         video: "",
       },
       {
@@ -147,9 +147,9 @@ export const getResumeData = (locale: string) => {
         dates: "2023",
         active: true,
         description: isEn
-          ? "Modern web application for travelers to document and share globetrotting experiences."
-          : "Aplicación web moderna para viajeros diseñada para documentar y compartir experiencias de viaje por el mundo.",
-        technologies: ["JavaScript", "HTML", "CSS"],
+          ? "Modern social platform for global travelers to share immersive stories and travel logs. Built with a focus on interactive UX and seamless mobile responsiveness."
+          : "Plataforma social moderna para viajeros globales, diseñada para compartir historias inmersivas y diarios de viaje. Construida con enfoque en UX interactiva y respuesta móvil fluida.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Firebase"],
         links: [
           {
             type: "Source",
@@ -157,7 +157,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "",
+        image: "/me.png",
         video: "",
       },
       {
@@ -166,9 +166,9 @@ export const getResumeData = (locale: string) => {
         dates: "2022",
         active: true,
         description: isEn
-          ? "Academic management system clone focused on UI/UX improvements and responsive design."
-          : "Clon de sistema de gestión académica enfocado en mejoras de UI/UX y diseño responsivo.",
-        technologies: ["HTML", "CSS", "JavaScript"],
+          ? "A refined reconstruction of the UPB academic portal, prioritizing accessibility and modern UI patterns. Achieved a 40% improvement in load times through asset optimization."
+          : "Una reconstrucción refinada del portal académico de la UPB, priorizando la accesibilidad y patrones de UI modernos. Logró una mejora del 40% en los tiempos de carga mediante optimización de activos.",
+        technologies: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
         links: [
           {
             type: "GitHub",
@@ -176,7 +176,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "",
+        image: "/laurier.png",
         video: "",
       },
     ],

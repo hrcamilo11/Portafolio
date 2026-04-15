@@ -10,19 +10,18 @@ import CTFSection from "@/components/section/ctf-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page({
+export default async function Page({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = React.use(params);
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations();
+  const t = await getTranslations();
   const DATA = getResumeData(locale);
 
   return (

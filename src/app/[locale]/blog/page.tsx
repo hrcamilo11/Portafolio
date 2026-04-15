@@ -4,8 +4,7 @@ import { Link } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { paginate, normalizePage } from "@/lib/pagination";
 import { ChevronRight } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -43,8 +42,8 @@ export default async function BlogPage({
   const { page: pageParam } = await searchParams;
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("Blog");
-  const navT = useTranslations("Navbar");
+  const t = await getTranslations("Blog");
+  const navT = await getTranslations("Navbar");
 
   const posts = allPosts;
   const sortedPosts = [...posts].sort((a, b) => {

@@ -7,7 +7,7 @@ import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
 import { Link } from "@/i18n/routing";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 function getSortedPosts() {
   return [...allPosts].sort((a, b) => {
@@ -17,8 +17,6 @@ function getSortedPosts() {
     return 1;
   });
 }
-
-import { useTranslations } from "next-intl";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -88,7 +86,7 @@ export default async function Blog({
   const { slug, locale } = await params;
   setRequestLocale(locale);
   const DATA = getResumeData(locale);
-  const t = useTranslations("Post");
+  const t = await getTranslations("Post");
 
   const sortedPosts = getSortedPosts();
   const currentIndex = sortedPosts.findIndex(
