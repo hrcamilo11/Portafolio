@@ -69,7 +69,7 @@ export const getResumeData = (locale: string) => {
         badges: [],
         location: "Medellín, Colombia",
         title: isEn ? "Research Intern" : "Pasante Investigativo",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        logoUrl: "/projects/experience.svg",
         start: isEn ? "February 2024" : "Febrero 2024",
         end: isEn ? "Present" : "Presente",
         description: isEn
@@ -82,7 +82,7 @@ export const getResumeData = (locale: string) => {
         badges: [],
         location: "Medellín, Colombia",
         title: isEn ? "Student Assistant" : "Auxiliar de Laboratorio",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        logoUrl: "/projects/experience.svg",
         start: "2022",
         end: "2023",
         description: isEn
@@ -97,7 +97,7 @@ export const getResumeData = (locale: string) => {
         degree: isEn 
           ? "Systems Engineering & Data Science Engineering" 
           : "Ingeniería de Sistemas e Informática e Ingeniería en Ciencia de Datos",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Logos%C3%ADmbolo_UPB.svg",
+        logoUrl: "/projects/education.svg",
         start: "2020",
         end: "2025",
       },
@@ -119,7 +119,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/atomic.png", 
+        image: "/projects/project_generic.png", 
         video: "",
       },
       {
@@ -138,7 +138,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/ib.png",
+        image: "/projects/project_generic.png",
         video: "",
       },
       {
@@ -157,7 +157,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/me.png",
+        image: "/projects/project_generic.png",
         video: "",
       },
       {
@@ -176,7 +176,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/laurier.png",
+        image: "/projects/project_generic.png",
         video: "",
       },
     ],
