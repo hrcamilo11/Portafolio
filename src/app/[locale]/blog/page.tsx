@@ -45,7 +45,7 @@ export default async function BlogPage({
   const t = await getTranslations("Blog");
   const navT = await getTranslations("Navbar");
 
-  const posts = allPosts;
+  const posts = allPosts.filter((post) => post.locale === locale);
   const sortedPosts = [...posts].sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
       return -1;

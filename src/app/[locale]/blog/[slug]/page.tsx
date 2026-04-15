@@ -9,13 +9,15 @@ import { Link } from "@/i18n/routing";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-function getSortedPosts() {
-  return [...allPosts].sort((a, b) => {
-    if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
-      return -1;
-    }
-    return 1;
-  });
+function getSortedPosts(locale: string) {
+  return [...allPosts]
+    .filter((p) => p.locale === locale)
+    .sort((a, b) => {
+      if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
+        return -1;
+      }
+      return 1;
+    });
 }
 
 export async function generateStaticParams() {
@@ -88,7 +90,7 @@ export default async function Blog({
   const DATA = getResumeData(locale);
   const t = await getTranslations("Post");
 
-  const sortedPosts = getSortedPosts();
+  const sortedPosts = getSortedPosts(locale);
   const currentIndex = sortedPosts.findIndex(
     (p) => p._meta.path.replace(/\.mdx$/, "") === slug
   );
