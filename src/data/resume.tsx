@@ -15,11 +15,11 @@ export const getResumeData = (locale: string) => {
     location: "Medellín, Colombia",
     locationLink: "https://www.google.com/maps/place/Medell%C3%ADn,+Antioquia",
     description: isEn 
-      ? "Systems Engineering and Data Science student. Focused on backend, cloud (AWS), and offensive cybersecurity."
-      : "Estudiante de Ingeniería de Sistemas e Informática e Ingeniería en Ciencias de Datos. Enfocado en backend, cloud (AWS) y ciberseguridad ofensiva.",
+      ? "Systems  Engineer. Focused on backend, cloud (AWS), and offensive cybersecurity."
+      : "Ingeniero de Sistemas e Informática. Enfocado en backend, cloud (AWS) y ciberseguridad ofensiva.",
     summary: isEn
-      ? "Systems Engineering and Data Science student at UPB. Specialized in backend development, serverless architectures on AWS (Lambda, DynamoDB, S3, Cognito), and CI/CD pipelines. Active cybersecurity researcher and CTF player with a focus on binary exploitation and web vulnerabilities."
-      : "Estudiante de Ingeniería de Sistemas y Ciencia de Datos en la UPB. Especializado en desarrollo backend, arquitecturas serverless en AWS (Lambda, DynamoDB, S3, Cognito) y pipelines CI/CD. Investigador activo en ciberseguridad y jugador de CTF con enfoque en explotación binaria y vulnerabilidades web.",
+      ? "Systems Engineer. Specialized in backend development, serverless architectures on AWS (Lambda, DynamoDB, S3, Cognito), and CI/CD pipelines. Active cybersecurity researcher and CTF player with a focus on binary exploitation and web vulnerabilities."
+      : "Ingeniero de Sistemas e Informática. Especializado en desarrollo backend, arquitecturas serverless en AWS (Lambda, DynamoDB, S3, Cognito) y pipelines CI/CD. Investigador activo en ciberseguridad y jugador de CTF con enfoque en explotación binaria y vulnerabilidades web.",
     avatarUrl: "/profile1.png",
     skills: [
       { name: "React", icon: Icons.react },
@@ -30,8 +30,17 @@ export const getResumeData = (locale: string) => {
       { name: "PostgreSQL", icon: Icons.postgresql },
       { name: "Docker", icon: Docker },
       { name: "AWS", icon: Icons.aws },
-      { name: isEn ? "Data Science" : "Ciencia de Datos", icon: Icons.database },
+      { name: isEn  ? "Data Science" : "Ciencia de Datos", icon: Icons.database },
       { name: isEn ? "Cybersecurity (CTF)" : "Ciberseguridad (CTF)", icon: Icons.shield },
+      { name: "Linux", icon: Icons.linux },
+      { name: "Git", icon: Icons.git },
+      { name: "JavaScript", icon: Icons.javascript },
+      { name: "Tailwind CSS", icon: Icons.tailwindcss },
+      { name: "Firebase", icon: Icons.firebase },
+      { name: "HTML5", icon: Icons.html5 },
+      { name: "CSS3", icon: Icons.css3 },
+      { name: "Next.js", icon: Icons.nextjs },
+      
     ],
     navbar: [
       { href: "/", icon: HomeIcon, label: isEn ? "Home" : "Inicio" },
@@ -68,9 +77,9 @@ export const getResumeData = (locale: string) => {
         href: "https://www.upb.edu.co",
         badges: [],
         location: "Medellín, Colombia",
-        title: isEn ? "Research Intern" : "Pasante Investigativo",
+        title: isEn ? "Systems Engineer" : "Ingeniero de Sistemas e Informática",
         logoUrl: "/projects/experience.svg",
-        start: isEn ? "February 2024" : "Febrero 2024",
+        start: isEn ? "February 2026" : "Febrero 2026",
         end: isEn ? "Present" : "Presente",
         description: isEn
           ? "Development and implementation of a full-stack web platform with serverless architecture on AWS (Lambda, DynamoDB, S3, Cognito). Implementation of CI/CD pipelines and process automation."
@@ -81,10 +90,10 @@ export const getResumeData = (locale: string) => {
         href: "https://www.upb.edu.co",
         badges: [],
         location: "Medellín, Colombia",
-        title: isEn ? "Student Assistant" : "Auxiliar de Laboratorio",
+        title: isEn ? "Systems Intern" : "Practicante Sistemas",
         logoUrl: "/projects/experience.svg",
-        start: "2022",
-        end: "2023",
+        start: isEn ? "June 2025" : "Junio 2025",
+        end: isEn ? "February 2026" : "Febrero 2026",
         description: isEn
           ? "Monitoring of containerized services in Docker, improving observability and fault detection. Support in programming labs."
           : "Monitoreo de servicios contenerizados en Docker, mejorando la observabilidad y detección de fallos. Apoyo en laboratorios de programación.",
@@ -182,8 +191,8 @@ export const getResumeData = (locale: string) => {
     ],
     ctfs: [
       {
-        title: "Ch0wn3rs (Competitive CTF Team)",
-        dates: "2022 - Present",
+        title: isEn ? "Ch0wn3rs (Competitive CTF Team)" : "Ch0wn3rs (Equipo de CTF)",
+        dates: "2025 - Present",
         location: "Global / Medellín, CO",
         description: isEn
           ? "Co-founder and member of Ch0wn3rs, a professional CTF team. We specialize in Binary Exploitation, Pwn, and Web Vulnerabilities. Ranked #1 in Colombia and #16 Globally in 2026."
