@@ -30,8 +30,8 @@ export const getResumeData = (locale: string) => {
       { name: "PostgreSQL", icon: Icons.postgresql },
       { name: "Docker", icon: Docker },
       { name: "AWS", icon: Icons.aws },
-      { name: isEn ? "Data Science" : "Ciencia de Datos", icon: Icons.globe },
-      { name: isEn ? "Cybersecurity (CTF)" : "Ciberseguridad (CTF)", icon: Icons.globe },
+      { name: isEn ? "Data Science" : "Ciencia de Datos", icon: Icons.database },
+      { name: isEn ? "Cybersecurity (CTF)" : "Ciberseguridad (CTF)", icon: Icons.shield },
     ],
     navbar: [
       { href: "/", icon: HomeIcon, label: isEn ? "Home" : "Inicio" },
@@ -180,9 +180,31 @@ export const getResumeData = (locale: string) => {
         video: "",
       },
     ],
-    hackathons: [],
+    ctfs: [
+      {
+        title: "Ch0wn3rs (Competitive CTF Team)",
+        dates: "2022 - Present",
+        location: "Global / Medellín, CO",
+        description: isEn
+          ? "Co-founder and member of Ch0wn3rs, a professional CTF team. We specialize in Binary Exploitation, Pwn, and Web Vulnerabilities. Ranked #1 in Colombia and #16 Globally in 2026."
+          : "Co-fundador y miembro de Ch0wn3rs, un equipo profesional de CTF. Nos especializamos en Explotación Binaria, Pwn y Vulnerabilidades Web. Clasificados como #1 en Colombia y #16 a nivel Global en 2026.",
+        image: "https://ctftime.org//media/team/LogoCh0wn3rs.jpeg",
+        links: [
+          {
+            title: "CTFtime Profile",
+            icon: <Icons.globe className="h-4 w-4" />,
+            href: "https://ctftime.org/team/408704/",
+          },
+          {
+            title: "Team Website",
+            icon: <Icons.globe className="h-4 w-4" />,
+            href: "https://ch0wn3rs.ninja/",
+          },
+        ],
+      },
+    ],
   } as const;
 };
 
-// Default export for backward compatibility if needed, but components should use getResumeData(locale)
+// Default export for backward compatibility
 export const DATA = getResumeData("es");
