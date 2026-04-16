@@ -8,7 +8,7 @@ import { useLocale } from "next-intl";
 export default function CTFSection() {
   const locale = useLocale();
   const DATA = getResumeData(locale);
-  if (!DATA.ctfs || DATA.ctfs.length === 0) return null;
+  if (!DATA.ctfs || (DATA.ctfs as any).length === 0) return null;
 
   return (
     <section id="ctf" className="overflow-hidden">
