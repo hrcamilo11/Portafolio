@@ -104,8 +104,8 @@ export const getResumeData = (locale: string) => {
         school: "Universidad Pontificia Bolivariana",
         href: "https://www.upb.edu.co",
         degree: isEn 
-          ? "Systems Engineering & Data Science Engineering" 
-          : "Ingeniería de Sistemas e Informática e Ingeniería en Ciencia de Datos",
+          ? "Systems Engineering" 
+          : "Ingeniería de Sistemas e Informática",
         logoUrl: "/projects/education.svg",
         start: "2020",
         end: "2025",
