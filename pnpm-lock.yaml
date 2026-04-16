@@ -93,6 +93,9 @@ importers:
       '@content-collections/next':
         specifier: ^0.2.10
         version: 0.2.11(@content-collections/core@0.14.3(typescript@5.9.3))(next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5))
+      '@eslint/eslintrc':
+        specifier: ^3.3.5
+        version: 3.3.5
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.1.18)
