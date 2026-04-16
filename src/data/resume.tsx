@@ -118,8 +118,8 @@ export const getResumeData = (locale: string) => {
         dates: "2024",
         active: true,
         description: isEn
-          ? "High-precision text tracking and processing engine built with TypeScript. Features advanced string manipulation algorithms and optimized performance for large-scale data sets."
-          : "Motor de seguimiento y procesamiento de texto de alta precisión construido con TypeScript. Incluye algoritmos avanzados de manipulación de cadenas y rendimiento optimizado para grandes conjuntos de datos.",
+          ? "Tracktext is a web application developed in React that allows textile companies to manage orders, customers, production, and inventory. The platform facilitates efficient management of production processes and communication between different roles within the company."
+          : "Tracktext es una aplicación web desarrollada en React que permite a empresas textiles gestionar pedidos, clientes, producción e inventario. La plataforma facilita la administración eficiente de los procesos de producción y la comunicación entre diferentes roles dentro de la empresa.",
         technologies: ["TypeScript", "Node.js", "Jest"],
         links: [
           {
