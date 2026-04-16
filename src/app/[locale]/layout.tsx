@@ -39,6 +39,9 @@ export async function generateMetadata({
       template: `%s | ${DATA.name}`,
     },
     description: DATA.description,
+    icons: {
+      icon: "/icons/icons8-usuario-masculino-en-c\u00EDrculo-96.gif",
+    },
     openGraph: {
       title: `${DATA.name}`,
       description: DATA.description,
