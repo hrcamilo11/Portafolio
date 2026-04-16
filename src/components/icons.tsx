@@ -15,7 +15,7 @@ export const Icons = {
   tailwindcss: (props: IconProps) => <img src="/icons/tailwindcss.svg" alt="Tailwind CSS" className={props.className} />,
   typescript: (props: IconProps) => <img src="/icons/typescript.svg" alt="TypeScript" className={props.className} />,
   react: (props: IconProps) => <img src="/icons/react.svg" alt="React" className={props.className} />,
-  github: (props: IconProps) => <img src="/icons/github.svg" alt="GitHub" className={props.className} />,
+  github: (props: IconProps) => <img src="/icons/github.svg" alt="GitHub" className={`${props.className || ""} dark:invert`} />,
   notion: (props: IconProps) => <img src="/icons/notion.svg" alt="Notion" className={props.className} />,
   openai: (props: IconProps) => <img src="/icons/openai.svg" alt="OpenAI" className={props.className} />,
   googleDrive: (props: IconProps) => <img src="/icons/googleDrive.svg" alt="Google Drive" className={props.className} />,
