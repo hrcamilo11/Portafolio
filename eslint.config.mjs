@@ -1,11 +1,11 @@
 import { defineConfig, globalIgnores } from 'eslint/config'
-import nextVitals from 'eslint-config-next/core-web-vitals.js'
 
+/** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = defineConfig([
-    ...nextVitals,
-    // Override default ignores of eslint-config-next.
+    {
+        extends: ['next/core-web-vitals'],
+    },
     globalIgnores([
-        // Default ignores of eslint-config-next:
         '.next/**',
         'out/**',
         'build/**',
