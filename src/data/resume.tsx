@@ -142,7 +142,7 @@ export const getResumeData = (locale: string) => {
         technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "TailwindCSS"],
         links: [
           {
-            type: "Source",
+            type: "GitHub",
             href: "https://github.com/hrcamilo11/TuSolucion---Plataforma",
             icon: <Icons.github className="size-3" />,
           },
@@ -161,7 +161,7 @@ export const getResumeData = (locale: string) => {
         technologies: ["JavaScript", "HTML5", "CSS3", "Firebase"],
         links: [
           {
-            type: "Source",
+            type: "GitHub",
             href: "https://github.com/hrcamilo11/TravelTales",
             icon: <Icons.github className="size-3" />,
           },
