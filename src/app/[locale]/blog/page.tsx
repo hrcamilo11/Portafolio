@@ -74,39 +74,42 @@ export default async function BlogPage({
       {paginatedPosts.length > 0 ? (
         <>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {paginatedPosts.map((post, id) => {
                 const slug = post._meta.path.replace(/\.mdx$/, "");
                 return (
                   <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05} key={slug}>
                     <Link
                       href={`/blog/${slug}`}
-                      className="group flex flex-col h-full overflow-hidden rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      className="group flex flex-col h-full overflow-hidden rounded-2xl bg-card border border-border/40 hover:border-primary/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                     >
-                      <div className="aspect-[16/9] w-full overflow-hidden bg-muted relative">
+                      <div className="aspect-[1.6/1] w-full overflow-hidden bg-muted/40 relative">
                         {post.image ? (
                           <img
                             src={post.image}
                             alt={post.title}
-                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                           />
                         ) : (
-                          <div className="w-full h-full flex items-center justify-center bg-secondary/50 text-muted-foreground text-sm">
-                            Blog Post
+                          <div className="w-full h-full bg-gradient-to-br from-primary/10 via-muted to-primary/5 flex items-center justify-center">
+                            <span className="text-muted-foreground/30 font-medium tracking-widest uppercase text-[10px]">
+                              {post.locale === "es" ? "Sin Imagen" : "No Image"}
+                            </span>
                           </div>
                         )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       </div>
                       
-                      <div className="p-5 flex flex-col flex-1">
-                        <p className="text-xs text-muted-foreground mb-3 flex items-center gap-1.5 font-medium">
-                          <span className="uppercase tracking-wider">{post.locale === "es" ? "Artículo" : "Article"}</span>
+                      <div className="p-6 flex flex-col flex-1">
+                        <p className="text-[13px] text-muted-foreground/70 mb-3 flex items-center gap-2 font-medium">
+                          <span className="text-foreground/80 font-semibold">{post.locale === "es" ? "Artículo" : "Article"}</span>
                           <span>&bull;</span>
                           <span>{post.publishedAt}</span>
                         </p>
-                        <h3 className="text-xl font-bold tracking-tight mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                        <h3 className="text-xl sm:text-[22px] font-bold tracking-tight mb-3 line-clamp-2 text-foreground group-hover:text-primary transition-colors duration-300 leading-snug">
                           {post.title}
                         </h3>
-                        <p className="text-sm text-muted-foreground line-clamp-3 text-pretty">
+                        <p className="text-sm text-muted-foreground/90 line-clamp-3 text-pretty leading-relaxed">
                           {post.summary}
                         </p>
                       </div>
