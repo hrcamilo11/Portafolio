@@ -140,18 +140,36 @@ export default async function Page({
           </div>
         </div>
       </section>
+      <section id="certifications">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <h2 className="text-xl font-bold">{t("Sections.certifications")}</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-2">
+            {DATA.certifications.map((cert, id) => (
+              <BlurFade key={cert.name} delay={BLUR_FADE_DELAY * 12 + id * 0.02}>
+                <a href={cert.href} target="_blank" rel="noopener noreferrer">
+                  <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2 hover:bg-muted transition-colors cursor-pointer">
+                    <span className="text-foreground text-sm font-medium">{cert.name}</span>
+                  </div>
+                </a>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="projects">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+        <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <ProjectsSection />
         </BlurFade>
       </section>
       <section id="ctf">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
+        <BlurFade delay={BLUR_FADE_DELAY * 15}>
           <CTFSection />
         </BlurFade>
       </section>
       <section id="contact">
-        <BlurFade delay={BLUR_FADE_DELAY * 16}>
+        <BlurFade delay={BLUR_FADE_DELAY * 17}>
           <ContactSection />
         </BlurFade>
       </section>
