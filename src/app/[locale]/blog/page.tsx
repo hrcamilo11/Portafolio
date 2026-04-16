@@ -74,31 +74,40 @@ export default async function BlogPage({
       {paginatedPosts.length > 0 ? (
         <>
           <BlurFade delay={BLUR_FADE_DELAY * 2}>
-            <div className="flex flex-col gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {paginatedPosts.map((post, id) => {
                 const slug = post._meta.path.replace(/\.mdx$/, "");
-                const indexNumber = (pagination.page - 1) * PAGE_SIZE + id + 1;
                 return (
                   <BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05} key={slug}>
                     <Link
-                      className="flex items-start gap-x-2 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                       href={`/blog/${slug}`}
+                      className="group flex flex-col h-full overflow-hidden rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
-                      <span className="text-xs font-mono tabular-nums font-medium mt-[5px]">
-                        {String(indexNumber).padStart(2, "0")}.
-                      </span>
-                      <div className="flex flex-col gap-y-2 flex-1">
-                        <p className="tracking-tight text-lg font-medium">
-                          <span className="group-hover:text-foreground transition-colors">
-                            {post.title}
-                            <ChevronRight
-                              className="ml-1 inline-block size-4 stroke-3 text-muted-foreground opacity-0 -translate-x-2 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0"
-                              aria-hidden
-                            />
-                          </span>
+                      <div className="aspect-[16/9] w-full overflow-hidden bg-muted relative">
+                        {post.image ? (
+                          <img
+                            src={post.image}
+                            alt={post.title}
+                            className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="w-full h-full flex items-center justify-center bg-secondary/50 text-muted-foreground text-sm">
+                            Blog Post
+                          </div>
+                        )}
+                      </div>
+                      
+                      <div className="p-5 flex flex-col flex-1">
+                        <p className="text-xs text-muted-foreground mb-3 flex items-center gap-1.5 font-medium">
+                          <span className="uppercase tracking-wider">{post.locale === "es" ? "Artículo" : "Article"}</span>
+                          <span>&bull;</span>
+                          <span>{post.publishedAt}</span>
                         </p>
-                        <p className="text-xs text-muted-foreground">
-                          {post.publishedAt}
+                        <h3 className="text-xl font-bold tracking-tight mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                          {post.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground line-clamp-3 text-pretty">
+                          {post.summary}
                         </p>
                       </div>
                     </Link>
