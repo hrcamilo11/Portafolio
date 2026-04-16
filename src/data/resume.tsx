@@ -73,7 +73,7 @@ export const getResumeData = (locale: string) => {
 
     work: [
       {
-        company: "Laboratorio Nacional de Comunidades Energeticas(LNCE)",
+        company: "Laboratorio Nacional de Comunidades Energeticas (LNCE)",
         href: "https://www.upb.edu.co",
         badges: [],
         location: "Medellín, Colombia",
