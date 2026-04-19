@@ -173,7 +173,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/projects/project_generic.png", 
+        image: "/projects/presupuesto.png", 
         video: "",
       },
       {
@@ -197,7 +197,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/projects/project_generic.png", 
+        image: "/projects/simulador.png", 
         video: "",
       },
       {
@@ -221,7 +221,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/projects/project_generic.png",
+        image: "/projects/tusolucion.png",
         video: "",
       },
       {
@@ -245,7 +245,7 @@ export const getResumeData = (locale: string) => {
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/projects/project_generic.png", 
+        image: "/projects/tracktext.png", 
         video: "",
       },
     ],
