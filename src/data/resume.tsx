@@ -153,18 +153,47 @@ export const getResumeData = (locale: string) => {
     ],
     projects: [
       {
-        title: "Tracktext",
-        href: "https://github.com/hrcamilo11/Tracktext",
+        title: "Presupuesto",
+        href: "https://www.presupuesto.cfd",
         dates: "2024",
         active: true,
         description: isEn
-          ? "Tracktext is a web application developed in React that allows textile companies to manage orders, customers, production, and inventory. The platform facilitates efficient management of production processes and communication between different roles within the company."
-          : "Tracktext es una aplicación web desarrollada en React que permite a empresas textiles gestionar pedidos, clientes, producción e inventario. La plataforma facilita la administración eficiente de los procesos de producción y la comunicación entre diferentes roles dentro de la empresa.",
-        technologies: ["TypeScript", "Node.js", "Jest"],
+          ? "Web platform designed for personal finance management, allowing users to effectively track expenses, manage incomes, and optimize their monthly budgets."
+          : "Plataforma web diseñada para la gestión de finanzas personales, permitiendo a los usuarios llevar un seguimiento efectivo de gastos, gestionar ingresos y optimizar sus presupuestos mensuales.",
+        technologies: ["React", "TypeScript", "Node.js", "TailwindCSS"],
         links: [
           {
+            type: "Website",
+            href: "https://www.presupuesto.cfd",
+            icon: <Icons.globe className="size-3" />,
+          },
+          {
             type: "GitHub",
-            href: "https://github.com/hrcamilo11/Tracktext",
+            href: "https://github.com/hrcamilo11/Presupuesto",
+            icon: <Icons.github className="size-3" />,
+          },
+        ],
+        image: "/projects/project_generic.png", 
+        video: "",
+      },
+      {
+        title: "Simulador de Física",
+        href: "https://simulador-fisica.vercel.app",
+        dates: "2023",
+        active: true,
+        description: isEn
+          ? "Interactive physics simulator built to visualize classical mechanics, kinematics, and dynamics in real time, serving as an educational tool for students."
+          : "Simulador interactivo de física construido para visualizar mecánica clásica, cinemática y dinámica en tiempo real, sirviendo como herramienta educativa para estudiantes.",
+        technologies: ["JavaScript", "HTML5", "CSS3", "Physics Simulation"],
+        links: [
+          {
+            type: "Website",
+            href: "https://simulador-fisica.vercel.app",
+            icon: <Icons.globe className="size-3" />,
+          },
+          {
+            type: "GitHub",
+            href: "https://github.com/hrcamilo11/SimuladorFisica",
             icon: <Icons.github className="size-3" />,
           },
         ],
@@ -173,7 +202,7 @@ export const getResumeData = (locale: string) => {
       },
       {
         title: "TuSolucion - Plataforma",
-        href: "https://github.com/hrcamilo11/TuSolucion---Plataforma",
+        href: "https://tu-solucion-plataforma.vercel.app",
         dates: "2023",
         active: true,
         description: isEn
@@ -181,6 +210,11 @@ export const getResumeData = (locale: string) => {
           : "Un ecosistema full-stack completo que conecta proveedores de servicios con clientes. Implementa gestión de recursos en tiempo real, pasarelas de pago seguras y un robusto sistema de calificación.",
         technologies: ["TypeScript", "React", "Node.js", "PostgreSQL", "TailwindCSS"],
         links: [
+          {
+            type: "Website",
+            href: "https://tu-solucion-plataforma.vercel.app",
+            icon: <Icons.globe className="size-3" />,
+          },
           {
             type: "GitHub",
             href: "https://github.com/hrcamilo11/TuSolucion---Plataforma",
@@ -191,41 +225,27 @@ export const getResumeData = (locale: string) => {
         video: "",
       },
       {
-        title: "TravelTales",
-        href: "https://github.com/hrcamilo11/TravelTales",
-        dates: "2023",
+        title: "Tracktext",
+        href: "https://tracktext.vercel.app",
+        dates: "2024",
         active: true,
         description: isEn
-          ? "Modern social platform for global travelers to share immersive stories and travel logs. Built with a focus on interactive UX and seamless mobile responsiveness."
-          : "Plataforma social moderna para viajeros globales, diseñada para compartir historias inmersivas y diarios de viaje. Construida con enfoque en UX interactiva y respuesta móvil fluida.",
-        technologies: ["JavaScript", "HTML5", "CSS3", "Firebase"],
+          ? "Tracktext is a web application developed in React that allows textile companies to manage orders, customers, production, and inventory. The platform facilitates efficient management of production processes and communication between different roles within the company."
+          : "Tracktext es una aplicación web desarrollada en React que permite a empresas textiles gestionar pedidos, clientes, producción e inventario. La plataforma facilita la administración eficiente de los procesos de producción y la comunicación entre diferentes roles dentro de la empresa.",
+        technologies: ["TypeScript", "React", "Node.js", "Jest"],
         links: [
           {
+            type: "Website",
+            href: "https://tracktext.vercel.app",
+            icon: <Icons.globe className="size-3" />,
+          },
+          {
             type: "GitHub",
-            href: "https://github.com/hrcamilo11/TravelTales",
+            href: "https://github.com/hrcamilo11/Tracktext",
             icon: <Icons.github className="size-3" />,
           },
         ],
-        image: "/projects/project_generic.png",
-        video: "",
-      },
-      {
-        title: "SIGAA Clone",
-        href: "https://github.com/hrcamilo11/SIGAA",
-        dates: "2022",
-        active: true,
-        description: isEn
-          ? "A refined reconstruction of the UPB academic portal, prioritizing accessibility and modern UI patterns. Achieved a 40% improvement in load times through asset optimization."
-          : "Una reconstrucción refinada del portal académico de la UPB, priorizando la accesibilidad y patrones de UI modernos. Logró una mejora del 40% en los tiempos de carga mediante optimización de activos.",
-        technologies: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
-        links: [
-          {
-            type: "GitHub",
-            href: "https://github.com/hrcamilo11/SIGAA",
-            icon: <Icons.github className="size-3" />,
-          },
-        ],
-        image: "/projects/project_generic.png",
+        image: "/projects/project_generic.png", 
         video: "",
       },
     ],
